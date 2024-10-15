@@ -32,10 +32,11 @@ class Result
         string period = second.Substring(2);
         second = second.Substring(0, 2);
 
-        if(period == "AM" && hour == "12")
+        if (period == "AM" && hour == "12")
         {
             hour = "00";
-        }else if(period == "PM" && int.Parse(hour) < 12)
+        }
+        else if (period == "PM" && int.Parse(hour) < 12)
         {
             hour = $"{int.Parse(hour) + 12}";
         }
