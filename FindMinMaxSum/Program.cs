@@ -43,10 +43,7 @@ class Solution
     public static void Main(string[] args)
     {
 
-        List<int> arr = new List<int>
-        {
-            256741038, 623958417, 467905213, 714532089, 938071625
-        };
+        List<int> arr = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(arrTemp => Convert.ToInt32(arrTemp)).ToList();
 
         Result.miniMaxSum(arr);
     }
