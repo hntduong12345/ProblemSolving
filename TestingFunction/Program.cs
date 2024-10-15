@@ -16,18 +16,21 @@ class Result
 {
 
     /*
-     * Complete the 'staircase' function below.
+     * Complete the 'miniMaxSum' function below.
      *
-     * The function accepts INTEGER n as parameter.
+     * The function accepts INTEGER_ARRAY arr as parameter.
      */
 
-    public static void staircase(int n)
+    public static void miniMaxSum(List<int> arr)
     {
-        string stair = "#";
-        for (int i = 0; i < n; i++)
+        int sum = 0, maxSum = 0, minSum = 0;
+        for (int i = 0; i < arr.Count(); i++)
         {
-            Console.WriteLine(stair.PadLeft(n - i, ' ').PadRight(n, '#'));
+            sum += arr[i];
         }
+        maxSum = sum - arr.Min();
+        minSum = sum - arr.Max();
+        Console.WriteLine(minSum + " " + maxSum);
     }
 
 }
@@ -36,8 +39,9 @@ class Solution
 {
     public static void Main(string[] args)
     {
-        int n = Convert.ToInt32(Console.ReadLine().Trim());
 
-        Result.staircase(n);
+        List<int> arr = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(arrTemp => Convert.ToInt32(arrTemp)).ToList();
+
+        Result.miniMaxSum(arr);
     }
 }
