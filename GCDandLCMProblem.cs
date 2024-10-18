@@ -43,9 +43,9 @@ class Result
 
         if (lcmOfA > b.Min()) return count;
 
-        for(int i = 1; i * lcmOfA <= b.Min(); i++)
+        for (int i = 1; i * lcmOfA <= b.Min(); i++)
         {
-            if(gcdOfB % (lcmOfA * i) == 0)
+            if (gcdOfB % (lcmOfA * i) == 0)
             {
                 count++;
             }
