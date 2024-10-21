@@ -17,7 +17,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Change12TimeBaseTo24TimeBas
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppleOrangeProblem", "AppleOrangeProblem\AppleOrangeProblem.csproj", "{5536200D-7F05-420A-A6B5-BA24564FF227}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwoKangarooProblem", "TwoKangarooProblem\TwoKangarooProblem.csproj", "{4EA5AE8B-41CE-4E25-9AF4-2DDD99F32D7B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TwoKangarooProblem", "TwoKangarooProblem\TwoKangarooProblem.csproj", "{4EA5AE8B-41CE-4E25-9AF4-2DDD99F32D7B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Problems", "Problems", "{33F08DA3-01CB-4533-8370-DEE002F9C5E6}"
+	ProjectSection(SolutionItems) = preProject
+		GCDandLCMProblem.cs = GCDandLCMProblem.cs
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -60,6 +65,15 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2F96613A-9BE0-40D7-859D-CCF19F6B89A1} = {33F08DA3-01CB-4533-8370-DEE002F9C5E6}
+		{32D9B858-AF82-42DA-9571-37106DCE0B3A} = {33F08DA3-01CB-4533-8370-DEE002F9C5E6}
+		{C6BCBD72-59CE-420E-80F2-1DE0E25E0C3C} = {33F08DA3-01CB-4533-8370-DEE002F9C5E6}
+		{970E67DD-7B06-40D2-BA43-4C13B6577C4A} = {33F08DA3-01CB-4533-8370-DEE002F9C5E6}
+		{18A1917A-3685-41B0-8406-F926EEE461A4} = {33F08DA3-01CB-4533-8370-DEE002F9C5E6}
+		{5536200D-7F05-420A-A6B5-BA24564FF227} = {33F08DA3-01CB-4533-8370-DEE002F9C5E6}
+		{4EA5AE8B-41CE-4E25-9AF4-2DDD99F32D7B} = {33F08DA3-01CB-4533-8370-DEE002F9C5E6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9CADEEE7-B2B6-4691-A12B-2D8FC1F26409}
