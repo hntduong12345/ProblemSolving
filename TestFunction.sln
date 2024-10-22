@@ -21,6 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TwoKangarooProblem", "TwoKa
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Problems", "Problems", "{33F08DA3-01CB-4533-8370-DEE002F9C5E6}"
 	ProjectSection(SolutionItems) = preProject
+		DivisibleSumPair.cs = DivisibleSumPair.cs
 		GCDandLCMProblem.cs = GCDandLCMProblem.cs
 	EndProjectSection
 EndProject
