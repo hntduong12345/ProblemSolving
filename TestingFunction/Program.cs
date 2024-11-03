@@ -1,76 +1,45 @@
-﻿using System.CodeDom.Compiler;
-using System.Collections.Generic;
-using System.Collections;
-using System.ComponentModel;
-using System.Diagnostics.CodeAnalysis;
-using System.Globalization;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Runtime.Serialization;
-using System.Text.RegularExpressions;
-using System.Text;
-using System;
+﻿/*Given 2 link list find the intersection point*/
 
-class Result
+public class Node
 {
+    public int value;
+    public Node next;
 
-    /*
-     * Complete the 'migratoryBirds' function below.
-     *
-     * The function is expected to return an INTEGER.
-     * The function accepts INTEGER_ARRAY arr as parameter.
-     */
-
-    public static int migratoryBirds(List<int> arr)
+    public Node(int value = 0, Node next = null)
     {
-        Dictionary<int, int> birds = new Dictionary<int, int>();
-        for (int i = 0; i < arr.Count; i++)
-        {
-            if (!birds.ContainsKey(arr[i]))
-            {
-                birds.Add(arr[i], 1);
-            }
-            else
-            {
-                birds[arr[i]]++;
-            }
-        }
-
-        int result = 0, count = 0;
-        foreach (int key in birds.Keys)
-        {
-            if (count <= birds[key])
-            {
-                if (count == birds[key])
-                {
-                    if (result > key) result = key;
-                }
-                else
-                {
-                    count = birds[key];
-                    result = key;
-                }
-            }
-        }
-
-        return result;
+        this.value = value;
+        this.next = next;
     }
-
 }
 
-class Solution
+class Test
 {
+
+    public static void FindIntersection(Node listA, Node listB)
+    {
+        Node headA = listA;
+        Node headB = listB;
+
+        if(headA == null || headB == null)
+        {
+            Console.WriteLine("No Intersection");
+            return;
+        }
+
+        while(headA.value != headB.value)
+        {
+            headA = headA.next;
+            headB = headB.next;
+        }
+
+        Console.WriteLine(headB.value);
+    }
+
     public static void Main(string[] args)
     {
-        //TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+        Node listA = new Node(1, new Node(3, new Node(5, new Node(7))));
+        Node listB = new Node(9, new Node(7, new Node(6, new Node(3))));
 
-        int arrCount = Convert.ToInt32(Console.ReadLine().Trim());
-
-        List<int> arr = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(arrTemp => Convert.ToInt32(arrTemp)).ToList();
-
-        int result = Result.migratoryBirds(arr);
-
-        Console.Write(result);
+        FindIntersection(listA, listB);
     }
 }
