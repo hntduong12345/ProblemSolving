@@ -20,18 +20,18 @@ class Test
         Node headA = listA;
         Node headB = listB;
 
-        if(headA == null || headB == null)
+        if (headA == null || headB == null)
         {
             Console.WriteLine("No Intersection");
             return;
         }
 
-        while(headA.value != headB.value)
+        while (headA.value != headB.value)
         {
             headA = headA.next;
             headB = headB.next;
 
-            if(headA == null || headB == null)
+            if (headA == null || headB == null)
             {
                 Console.WriteLine("No Intersection");
                 return;
