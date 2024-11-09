@@ -38,15 +38,15 @@ class Result
         foreach (int[][] collection in possible_collections)
         {
             int currentCost = 0;
-            for(int i=0; i<3; i++)
+            for (int i = 0; i < 3; i++)
             {
-                for(int j=0; j<3; j++)
+                for (int j = 0; j < 3; j++)
                 {
                     currentCost += Math.Abs(s[i][j] - collection[i][j]);
                 }
             }
-            
-            if(minCost == -1)
+
+            if (minCost == -1)
             {
                 minCost = currentCost;
             }
